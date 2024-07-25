@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Boshitha Gunarathna Portfolio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+ 
+</head>
+
+<body id="page-top">
+ 
+
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">Boshitha - Portfolio</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#work">Work</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Skew Star /-->
+<!-- Add this to your HTML -->
+<div id="home" class="intro route bg-image" style="background-image: url(img/port2.png)">
+  <div class="overlay-intro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h1 class="intro-title mb-4">I am Boshitha Gunarathna</h1>
+        <p class="intro-subtitle">
+          <span class="text-slider-items">Web Developer, Web Designer, Frontend Developer, Backend Developer, Mobile App Developer</span>
+          <strong class="text-slider"></strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Floating binary code in the background -->
+  <div class="binary-background">
+    <!-- The binary numbers will be dynamically inserted here -->
+  </div>
+</div>
+
+<!-- Add this to your CSS -->
+<style>
+  .intro {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .overlay-intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .intro-content {
+    position: relative;
+    height: 100%;
+    display: table;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+  }
+
+  .intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .intro-subtitle {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    animation: slideIn 2s ease-out;
+  }
+
+  .binary-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Courier New', monospace;
+  }
+
+  .binary-background div {
+    position: absolute;
+    width: auto;
+    text-align: center;
+    opacity: 0.3;
+    white-space: nowrap;
+    animation: fall 5s linear infinite, change 0.5s steps(10) infinite;
+    font-size: 1rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  @keyframes change {
+    0% { content: '0101010101'; }
+    25% { content: '1100110011'; }
+    50% { content: '1010101010'; }
+    75% { content: '1110001110'; }
+    100% { content: '0101010101'; }
+  }
+</style>
+
+<!-- Add this to your JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const binaryBackground = document.querySelector('.binary-background');
+    const numOfElements = 30; // Number of falling binary strings
+
+    function getRandomBinaryString(length = 20) {
+      return Array.from({ length }, () => Math.floor(Math.random() * 2)).join('');
+    }
+
+    for (let i = 0; i < numOfElements; i++) {
+      const div = document.createElement('div');
+      div.textContent = getRandomBinaryString(); // Create binary string
+      div.style.left = `${Math.random() * 100}%`; // Random horizontal position
+      div.style.top = `${Math.random() * 100}%`; // Random starting vertical position
+      div.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random animation duration
+      binaryBackground.appendChild(div);
+    }
+  });
+</script>
+
+  <!--/ Intro Skew End /-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/IMG_0163.png" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Boshitha Gunarathna</span></p>
+                      <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
+                      <p><span class="title-s">Email: </span> <span>Boshithag@gmail.com</span></p>
+                      <p><span class="title-s">Phone: </span> <span>(+94)78 776 2803 </span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skills</p>
+                  <div class="skills-grid">
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-html5"></i></span> HTML
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-css3-alt"></i></span> CSS3
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-js"></i></span> JavaScript
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-php"></i></span> PHP
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-react"></i></span> React
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-node-js"></i></span> Node.js
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-vuejs"></i></span> Vue.js
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-laravel"></i></span> Laravel
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fas fa-database"></i></span> MongoDB
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fas fa-server"></i></span> Express
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fab fa-android"></i></span> Android Studio
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-icon"><i class="fas fa-mobile-alt"></i></span> Kotlin
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Add this in your CSS to style the skills grid -->
+                <style>
+                  .skills-grid {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    justify-content: space-around;
+                  }
+                
+                  .skill-item {
+                    display: flex;
+                    align-items: center;
+                    flex: 1 1 calc(50% - 20px); /* Adjust the percentage to fit your design */
+                    max-width: calc(50% - 20px); /* Same as above */
+                    margin-bottom: 20px;
+                  }
+                
+                  .skill-icon {
+                    display: inline-block;
+                    width: 50px;
+                    text-align: center;
+                    margin-right: 10px;
+                    font-size: 50px;
+                  }
+                
+                  .skill-item span {
+                    font-size: 18px;
+                  }
+                </style>
+                
+                
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      About me
+                    </h5>
+                  </div>
+                  <p class="lead">
+                    As a motivated Fourth-year student pursuing excellence in BSc (Hons) Information Technology
+                    (Special) at Sri
+                    Lanka Institute of Information Technology (SLIIT) Malabe Campus, I am enthusiastic about
+                    opportunities in
+                    Full Stack Development, Front End Development and Backend Development.
+                  </p>
+                  <p class="lead">
+                    With a keen attention to detail,
+                    dedication to precision, and proficient technical skills, I am well-equipped to excel in diverse
+                    roles.I bring
+                    strong communication abilities and a collaborative mindset to contribute effectively to project
+                    objectives.
+                    Fueled by a passion for technology and a commitment to continual growth, I am eager to leverage my
+                    skills
+                    to make impactful contributions across various domains within the IT industry.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--/ Section Services Star /-->
+<section id="service" class="services-mf route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">Services</h3>
+          <p class="subtitle-a">
+            Offering top-notch development and design services to meet your needs.
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-code-working"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">Web Development</h2>
+            <p class="s-description text-center">
+              Creating responsive and robust websites to elevate your online presence.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-code"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">Front-End Development</h2>
+            <p class="s-description text-center">
+              Building user-friendly interfaces with modern technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-ios-gear"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">Back-End Development</h2>
+            <p class="s-description text-center">
+              Developing secure and scalable back-end systems for your applications.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">Mobile App Development</h2>
+            <p class="s-description text-center">
+              Crafting high-performance mobile applications for various platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-paintbrush"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">Web Design</h2>
+            <p class="s-description text-center">
+              Designing visually appealing and user-centric web designs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Section Services End /-->
+
+<div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
+  <div class="overlay-mf"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-lg-4">
+        <div class="counter-box">
+          <div class="counter-ico">
+            <span class="ico-circle"><i class="ion-code"></i></span>
+          </div>
+          <div class="counter-num">
+            <p class="counter">10</p>
+            <span class="counter-text">PROJECTS COMPLETED</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-4">
+        <div class="counter-box pt-4 pt-md-0">
+          <div class="counter-ico">
+            <span class="ico-circle"><i class="ion-ios-gear-outline"></i></span>
+          </div>
+          <div class="counter-num">
+            <p class="counter">8</p>
+            <span class="counter-text">CODING LANGUAGES</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-4">
+        <div class="counter-box pt-4 pt-md-0">
+          <div class="counter-ico">
+            <span class="ico-circle"><i class="ion-ribbon-b"></i></span>
+          </div>
+          <div class="counter-num">
+            <p class="counter">5</p>
+            <span class="counter-text">CERTIFICATIONS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--/ Section Portfolio Star /-->
+<section id="work" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Portfolio
+          </h3>
+          <p class="subtitle-a">
+            A showcase of my recent projects and achievements.
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="https://github.com/IT21319792/ITPM.git" >
+            <div class="work-img">
+              <img src="img/1.png" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">Project Management System</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">Web Development</span> / <span class="w-date">20 July <br>2024</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="https://github.com/SLIITITP/y2_s2_wd_it_01-itp_wd_b08_g02.git">
+            <div class="work-img">
+              <img src="img/2-2.PNG" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">Small-Scale Tea Growers Management</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">Full Stack Development</span> / <span class="w-date">15 June 2024</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+            <div class="work-img">
+              <img src="img/3.png" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">Blog Website</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">Web Development</span> / <span class="w-date">10 May <br>2024</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+            <div class="work-img">
+              <img src="img/4.png" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">Weather Data Application</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">Front-End Development</span> / <span class="w-date">5 April 2024</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="img/work-5.jpg" data-lightbox="gallery-mf">
+            <div class="work-img">
+              <img src="img/5.png" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">Invoice Generating <br> App</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">Full Stack Development</span> / <span class="w-date">25 March 2024</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="work-box">
+          <a href="img/work-6.jpg" data-lightbox="gallery-mf">
+            <div class="work-img">
+              <img src="img/6.png" alt="" class="img-fluid">
+            </div>
+            <div class="work-content">
+              <div class="row">
+                <div class="col-sm-8">
+                  <h2 class="w-title">Automated Interview Process Tool</h2>
+                  <div class="w-more">
+                    <span class="w-ctegory">Full Stack Development</span> / <span class="w-date">15 February 2024</span>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="w-like">
+                    <span class="ion-ios-plus-outline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Section Portfolio End /-->
+
+
+
+
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Contact Me
+                    </h5>
+                  </div>
+                  <div>
+                    <form action="" method="post" role="form" class="contactForm">
+                      <div id="sendmessage">Your message has been sent. Thank you!</div>
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                              data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                              data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                              data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required"
+                              data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Get in Touch
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      Feel free to contact me for any inquiries or collaborations. I am always open to new opportunities. 
+
+                    </p>
+                    <ul class="list-ico">
+                      <li><span class="ion-ios-location"></span>  378/C,Horagolla , Ganemulla</li>
+                      <li><span class="ion-ios-telephone"></span> (+94) 78 776 2803</li>
+                      <li><span class="ion-email"></span> boshithag@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <li><a href="https://github.com/IT21319792" target="_blank"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                     
+                      <li><a href="https://www.linkedin.com/in/boshitha-gunarathna-086075219" target="_blank"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">&copy;  <strong>Copyright</strong>. All Rights Reserved</p>
+              <div class="credits">
+            
+               Boshitha Gunarathna
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
